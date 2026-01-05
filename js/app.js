@@ -123,7 +123,7 @@ let selectedCards = [];
 let tempPlayersMoves = 0;
 let defaultClasses = 0;
 let tempMoreContentContainer = 1;
-let max = 0;
+let max = -Infinity;
 let indexes = [];
 
 iconsClass.forEach((el) => {
@@ -169,7 +169,6 @@ iconsClass.forEach((el) => {
             if (CheckWinner(selectedCards)) {
                 defaultClasses += 1
 
-                console.log(defaultClasses);
                 if (playOBJ.numberOfPlayer > 1) {
                     players[tempPlayersMoves].correctAnswers += 1;
                 }
@@ -209,7 +208,7 @@ iconsClass.forEach((el) => {
                         morePlayerModal.classList.remove("hidden")
                         modalParda.classList.remove("hidden")
 
-                        moreContentContainer.forEach((el) => {
+                        moreContentContainer.forEach((el, i) => {
                             if (tempMoreContentContainer <= playOBJ.numberOfPlayer) {
                                 el.classList.remove("hidden")
                             }
@@ -218,6 +217,21 @@ iconsClass.forEach((el) => {
                             tempPairs.textContent = `${players[tempMoreContentContainer -1].correctAnswers} Pairs` 
 
                             tempMoreContentContainer++
+
+                            players.forEach((item, index) => {
+                                if (item.correctAnswers > max) {
+                                    max = item.correctAnswers;
+                                    indexes = [index];
+                                } else if (item.correctAnswers === max) {
+                                    indexes.push(index);
+                                }
+                            });
+
+                            
+                            if (indexes.includes(i)) {
+                                el.classList.add("winnerContainer");
+                                el.querySelector(".winner").classList.remove("hidden")
+                            }
                         })
                     }
                 }
@@ -228,7 +242,8 @@ iconsClass.forEach((el) => {
                         morePlayerModal.classList.remove("hidden")
                         modalParda.classList.remove("hidden")
 
-                        moreContentContainer.forEach((el) => {
+
+                        moreContentContainer.forEach((el, i) => {
                             if (tempMoreContentContainer <= playOBJ.numberOfPlayer) {
                                 el.classList.remove("hidden")
                             }
@@ -237,23 +252,20 @@ iconsClass.forEach((el) => {
                             tempPairs.textContent = `${players[tempMoreContentContainer -1].correctAnswers} Pairs` 
 
                             tempMoreContentContainer++;
-                        
+
                             players.forEach((item, index) => {
-                                if (item.correctAnswer > max) {
+                                if (item.correctAnswers > max) {
                                     max = item.correctAnswers;
                                     indexes = [index];
                                 } else if (item.correctAnswers === max) {
                                     indexes.push(index);
                                 }
                             });
-
-                            indexes.forEach((index) => {
-                                if ((tempMoreContentContainer - 1) == index) {
-                                    el.classList.add("winnerContainer")
-                                    let tempWinner = el.querySelector(".winner")
-                                    tempWinner.classList.remove("hidden")
-                                }
-                            })
+                        
+                            if (indexes.includes(i)) {
+                                el.classList.add("winnerContainer");
+                                el.querySelector(".winner").classList.remove("hidden")
+                            }
                         })
                     }
                 }
