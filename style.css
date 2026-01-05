@@ -1,0 +1,551 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    padding-bottom: 80px;
+}
+
+.settingsContainer {
+    margin-top: -36px;
+    background-color: #152938;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    z-index: 9000;
+}
+
+.miniContainer {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 654px;
+}
+
+.settingsTitle {
+    padding-top: 54px;
+    text-align: center;
+    color: #fcfcfc;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: auto;
+    letter-spacing: 0px;
+}
+
+.settingsDiv {
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.spansStyle {
+    color: #7191A5;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    color: #fcfcfc;
+    font-size: 26px;
+    font-weight: bold;
+    border-radius: 26px;
+    background-color: #bcced9;
+    text-align: center;
+    padding: 11px 93px;
+}
+
+.buttons:hover{
+    background-color: #6395B8;
+    cursor: pointer;
+    transition: 0.7s ease;
+}
+
+.buttonsActive {
+    background-color: #152938 !important;
+}
+
+
+
+.buttos:hover{
+    background-color: #6395B8;
+    cursor: pointer;
+    transition: 0.7s ease;
+}
+
+.themeContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.playersNumber {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.gridSIze {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.pNumUL {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.buttos {
+    width: 50px !important;
+    list-style: none;
+    background-color: #bcced9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fcfcfc;
+    font-size: 26px;
+    font-weight: bold;
+    border-radius: 26px;
+    padding: 5px 50px;
+}
+
+.startButton {
+    background-color: #FDA214;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    width: 100%;
+    height: 60px;
+    border-radius: 35px;
+    border: 2px solid #FDA214;
+}
+
+.startButton:hover {
+    border: 2px solid #152938;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.liftUp {
+    transition: 0.5s ease;
+    transform: translateY(-120%);
+}
+
+.iconsClass {
+    width: 90px;
+    height: 90px;
+    background-color: #BCCED9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.iconsClass i {
+    pointer-events: none;
+}
+
+
+.hidden {
+    display: none !important;
+}
+
+.parda {
+    /* pointer-events: none; */
+    width: 90px;
+    height: 90px;
+    background-color: #304859;
+    display: flex;
+    border-radius: 50%;
+    /* z-index: 1000; */
+    cursor: pointer;
+    position: absolute;
+}
+
+.iconsClass.iconActive .parda {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.9);
+}
+
+.iconsClass.IconDefault .parda {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.9);
+}
+
+.iconActive {
+    background-color: #FDA214 !important;
+    /* cursor: pointer; */
+}
+
+.iconActive *{
+    color: white !important;
+}
+
+.icons4X4Container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    list-style: none;
+    gap: 15px;
+}
+
+.playingField {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1110px;
+}
+
+.headerSec{
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.restartButton{
+    background-color: #FDA214;
+    border-radius: 26px;
+    padding: 13px 29px;
+    border: 2px solid #FDA214;
+    color: #fcfcfc;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.newGameButton{
+    color: #304859;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 26px;
+    background-color: #DFE7EC;
+    padding: 13px 25px;
+    border: 2px solid #DFE7EC;
+}
+
+.newGameButton:hover{
+    opacity: 0.7;
+    transition: 0.5s ease;
+}
+
+
+.restartButton:hover{
+    opacity: 0.7;
+    transition: 0.5s ease;
+}
+
+.icons4x4Contain {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    margin-top: 55px;
+}
+
+.icons6x6Contain{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    margin-top: 55px;
+}
+
+.icons6X6Container{
+    margin-left: -100px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    list-style: none;
+    gap: 15px;
+}
+
+.totalOnePlayerContainer{
+    width: 100%;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.onePlayerTimeContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 230px;
+    padding: 20px;
+    background-color: #DFE7EC;
+    border-radius: 10px;
+} 
+.onePlayerTime{
+    font-weight: bold;
+    font-size: 18px;
+    color: #7191A5;
+} 
+.timeTextBox{
+    font-size: 32px;
+    font-weight: bold;
+    color: #304859;
+}
+.onePlayerMovesContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 230px;
+    padding: 20px;
+    background-color: #DFE7EC;
+    border-radius: 10px;
+}
+.onePlayerMoves{
+    font-weight: bold;
+    font-size: 18px;
+    color: #7191A5;
+}
+.movesTextBox{
+    font-size: 32px;
+    font-weight: bold;
+    color: #304859;
+} 
+
+.totalAllPlayerContainer {
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.firstPlayerContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 230px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #DFE7EC;
+}
+.secondPlayerContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 230px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #DFE7EC;
+}
+.thirdPlayerContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 230px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #DFE7EC;
+}
+.fourthPlayerContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 230px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #DFE7EC;
+}
+
+.firstPlayerName{
+    font-size: 18px;
+    font-weight: bold;
+    color: #7191A5;
+}
+.secondPlayerName{
+    font-size: 18px;
+    font-weight: bold;
+    color: #7191A5;
+}
+.thirdPlayerName{
+    font-size: 18px;
+    font-weight: bold;
+    color: #7191A5;
+}
+.fourthPlayerName{
+    font-size: 18px;
+    font-weight: bold;
+    color: #7191A5;
+}
+
+
+.firstPlayerMoveTextBox{
+    font-size: 32px;
+    font-weight: bold;
+    color: #304859;
+}
+.secondPlayerMoveTextBox{
+    font-size: 32px;
+    font-weight: bold;
+    color: #304859;
+}
+.thirdPlayerMoveTextBox{
+    font-size: 32px;
+    font-weight: bold;
+    color: #304859;
+}
+.fourthPlayerMoveTextBox{
+    font-size: 32px;
+    font-weight: bold;
+    color: #304859;
+}
+
+.modalContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 100%;
+  max-width: 654px;
+  height: 510px;
+  background-color: #F2F2F2;
+  border-radius: 20px;
+  display: flex;
+  z-index: 1000000;
+  padding: 56px;
+  flex-direction: column;
+}
+
+.modalContainer.morePlayer {
+    height: 700px;
+}
+
+.modalParda {
+    background-color: #979797;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    margin-top: -36px;
+    opacity: 0.8;
+    z-index: 99999;
+}
+
+.onePlayerModalTitle {
+    text-align: center;
+    font-weight: bold;
+    font-size: 48px;
+    color: #152938;
+    margin-bottom: 16px;
+}
+
+.onePlayerModalDescription {
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+    color: #7191A5;
+    margin-bottom: 40px;
+}
+
+.timeElapsedContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+    background-color: #DFE7EC;
+    border-radius: 10px;
+    margin-bottom: 16px;
+}
+
+.moreContentContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+    background-color: #DFE7EC;
+    border-radius: 10px;
+    margin-bottom: 16px;
+}
+
+.movesTakenContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+    background-color: #DFE7EC;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.timeElapsedTitle {
+    font-size: 18px;
+    font-weight: bold;
+    color: #7191A5;
+}
+
+.movesTakenTitle {
+    font-size: 18px;
+    font-weight: bold;
+    color: #7191A5;
+}
+
+.elapsedTextBox {
+    font-weight: bold;
+    font-size: 32px;
+    color: #304859;
+}
+
+.takenTextBox {
+    font-weight: bold;
+    font-size: 32px;
+    color: #304859;
+}
+
+.onePlayerModalRestartButton {
+    width: 264px;
+    height: 52px;
+    background-color: #FDA214;
+    border-radius: 26px;
+    border: 1px solid #FDA214;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.onePlayerModalNewGameButton {
+    font-weight: bold;
+    font-size: 20px;
+    color: #304859;
+    width: 264px;
+    height: 52px;
+    background-color: #DFE7EC;
+    border: 1px solid #DFE7EC;
+    border-radius: 26px;
+    cursor: pointer;
+}
+
+.onePlayerModalButtons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.timeElapsedContainer.winnerContainer{
+    background-color: #152938 !important;
+    color: white !important;
+}
+
+.winnerContainer *{
+    color: white !important;
+}
