@@ -55,7 +55,6 @@ export function CheckWinner(obj) {
         result = true
         
     }
-
     
     return result
 }

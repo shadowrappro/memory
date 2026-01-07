@@ -285,13 +285,3 @@ iconsClass.forEach((el) => {
         }
     });
 });
-
-// Restart
-// restartButton.addEventListener("click", () => {
-//     startGameButton.click()
-//     onePlayerMoves = 0
-//     movesTextBox.textContent = onePlayerMoves;
-//     iconsClass.forEach((el) => {
-//         el.classList.remove("IconDefault")
-//     })
-// })
